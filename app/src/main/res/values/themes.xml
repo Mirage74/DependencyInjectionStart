@@ -1,5 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <style name="Theme.DependencyInjectionStart" parent="android:Theme.Material.Light.NoActionBar" />
+    <style name="Base.Theme.DependencyInjectionStart" parent="Theme.AppCompat.DayNight" />
+    <style name="Theme.DependencyInjectionStart" parent="Base.Theme.DependencyInjectionStart" />
 </resources>
