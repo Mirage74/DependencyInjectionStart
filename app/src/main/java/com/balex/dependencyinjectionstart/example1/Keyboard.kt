@@ -1,4 +1,7 @@
 package com.balex.dependencyinjectionstart.example1
 
-class Keyboard {
+import javax.inject.Inject
+
+
+class Keyboard @Inject constructor() {
 }

@@ -1,6 +1,7 @@
 plugins {
     alias(libs.plugins.androidApplication)
     alias(libs.plugins.jetbrainsKotlinAndroid)
+    id("kotlin-kapt")
 }
 
 android {
@@ -64,8 +65,9 @@ dependencies {
 
     implementation(libs.androidx.appcompat)
 
+
     implementation(libs.dagger)
-    annotationProcessor(libs.google.dagger.compiler)
+    kapt (libs.dagger.compiler)
 
 
 
