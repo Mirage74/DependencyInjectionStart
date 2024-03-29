@@ -13,5 +13,6 @@ class MainActivity : AppCompatActivity() {
         activity.keyboard.toString()
         activity.mouse.toString()
         activity.monitor.toString()
+        activity.computer.toString()
     }
 }

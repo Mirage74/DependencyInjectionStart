@@ -14,6 +14,9 @@ class Activity {
     @Inject
     lateinit var monitor: Monitor
 
+    @Inject
+    lateinit var computer: Computer
+
 //    val component = DaggerNewComponent.create()
 //    val keyboard = component.getKeyboard()
 //    val mouse = component.getMouse()
