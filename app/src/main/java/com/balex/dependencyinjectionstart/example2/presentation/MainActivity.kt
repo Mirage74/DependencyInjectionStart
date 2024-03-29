@@ -13,9 +13,10 @@ class MainActivity : AppCompatActivity() {
     private val component = DaggerApplicationComponent.create()
 
     override fun onCreate(savedInstanceState: Bundle?) {
+        component.inject(this)
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-        component.inject(this)
+
 
         viewModel.method()
     }
