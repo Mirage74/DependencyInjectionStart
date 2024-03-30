@@ -1,7 +1,6 @@
 package com.balex.dependencyinjectionstart.example2.data.database
 
 import android.content.Context
-import android.util.Log
 import javax.inject.Inject
 
 
@@ -11,7 +10,7 @@ class ExampleDatabase @Inject constructor(
 ){
 
     fun method() {
-        Log.d(LOG_TAG, "ExampleDatabase $this")
+        //Log.d(LOG_TAG, "ExampleDatabase $this")
     }
 
     companion object {

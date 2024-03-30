@@ -1,7 +1,6 @@
 package com.balex.dependencyinjectionstart.example2.data.network
 
 import android.content.Context
-import android.util.Log
 import javax.inject.Inject
 
 
@@ -11,7 +10,7 @@ class ExampleApiService @Inject constructor(
 ) {
 
     fun method() {
-        Log.d(LOG_TAG, "ExampleApiService $this")
+        //Log.d(LOG_TAG, "ExampleApiService $this")
     }
 
     companion object {
