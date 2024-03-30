@@ -1,30 +1,14 @@
 package com.balex.dependencyinjectionstart.example2.di
 
 import android.content.Context
-import com.balex.dependencyinjectionstart.example2.presentation.MainActivity
-import com.balex.dependencyinjectionstart.example2.presentation.MainActivity2
 import dagger.BindsInstance
 import dagger.Component
 
 @ApplicationScope
-@Component (modules = [DataModule::class, DomainModule::class, ViewModelModule::class])
+@Component(modules = [DataModule::class, DomainModule::class])
 interface ApplicationComponent {
 
-    fun inject(activity: MainActivity)
-    fun inject(activity: MainActivity2)
-
-//    @Component.Builder
-//    interface ApplicationComponentBuilder {
-//
-//        @BindsInstance
-//        fun context(context: Context): ApplicationComponentBuilder
-//
-//        @BindsInstance
-//        fun currentTime(time: Long): ApplicationComponentBuilder
-//
-//        fun build(): ApplicationComponent
-//
-//    }
+    fun activityComponentFactory(): ActivityComponent.Factory
 
     @Component.Factory
     interface ApplicationComponentFactory {

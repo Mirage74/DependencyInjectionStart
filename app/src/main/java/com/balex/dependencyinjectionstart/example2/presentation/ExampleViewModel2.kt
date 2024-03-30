@@ -6,11 +6,12 @@ import com.balex.dependencyinjectionstart.example2.domain.ExampleRepository
 import javax.inject.Inject
 
 class ExampleViewModel2 @Inject constructor(
-    private val repository: ExampleRepository
+    private val repository: ExampleRepository,
+    private val id2: String
 ): ViewModel() {
 
     fun method() {
         repository.method()
-        Log.d("ExampleViewModel2", "$this")
+        Log.d("ExampleViewModel2", "$this $id2")
     }
 }
