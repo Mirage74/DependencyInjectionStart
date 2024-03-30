@@ -4,6 +4,7 @@ import com.balex.dependencyinjectionstart.example2.data.datasource.ExampleLocalD
 import com.balex.dependencyinjectionstart.example2.data.datasource.ExampleLocalDataSourceImpl
 import com.balex.dependencyinjectionstart.example2.data.datasource.ExampleRemoteDataSource
 import com.balex.dependencyinjectionstart.example2.data.datasource.ExampleRemoteDataSourceImpl
+import com.balex.dependencyinjectionstart.example2.data.datasource.TestRemoteDataSourceImpl
 import dagger.Binds
 import dagger.Module
 
@@ -15,7 +16,13 @@ interface DataModule {
     @Binds
     fun bindLocalDataSource(impl: ExampleLocalDataSourceImpl): ExampleLocalDataSource
 
+    @ProdQualifier
     @ApplicationScope
     @Binds
     fun bindRemoteDataSource(impl: ExampleRemoteDataSourceImpl): ExampleRemoteDataSource
+
+    @TestQualifier
+    @ApplicationScope
+    @Binds
+    fun bindTestRemoteDataSource(impl: TestRemoteDataSourceImpl): ExampleRemoteDataSource
 }
