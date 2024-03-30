@@ -15,8 +15,7 @@ interface ApplicationComponent {
 
         fun create(
             @BindsInstance context: Context,
-            @BindsInstance time: Long
+            @BindsInstance timeMillis: Long
         ): ApplicationComponent
-
     }
 }
