@@ -19,7 +19,7 @@ interface ApplicationComponent {
         @BindsInstance
         fun currentTime(time: Long): ApplicationComponentBuilder
 
-        fun build(): ApplicationComponent
+        fun build2(): ApplicationComponent
 
     }
 }

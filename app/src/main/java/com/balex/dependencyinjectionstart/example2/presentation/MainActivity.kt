@@ -14,7 +14,7 @@ class MainActivity : AppCompatActivity() {
         DaggerApplicationComponent.builder()
             .context(application)
             .currentTime(System.currentTimeMillis())
-            .build()
+            .build2()
     }
 
     override fun onCreate(savedInstanceState: Bundle?) {
