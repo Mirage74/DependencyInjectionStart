@@ -5,6 +5,7 @@ import androidx.appcompat.app.AppCompatActivity
 import com.balex.dependencyinjectionstart.R
 import com.balex.dependencyinjectionstart.example2.di.ContextModule
 import com.balex.dependencyinjectionstart.example2.di.DaggerApplicationComponent
+import com.balex.dependencyinjectionstart.example2.di.DomainModule22
 import javax.inject.Inject
 
 class MainActivity : AppCompatActivity() {
@@ -13,6 +14,7 @@ class MainActivity : AppCompatActivity() {
     lateinit var viewModel: ExampleViewModel
     private val component by lazy {
         DaggerApplicationComponent.builder()
+            //.domainModule22(DomainModule22())
             .contextModule(ContextModule(application))
             .build()
     }

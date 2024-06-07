@@ -2,17 +2,17 @@ package com.balex.dependencyinjectionstart.example2.di
 
 import com.balex.dependencyinjectionstart.example2.data.repository.ExampleRepositoryImpl
 import com.balex.dependencyinjectionstart.example2.domain.ExampleRepository
-import dagger.Binds
 import dagger.Module
+import dagger.Provides
 
 @Module
-//class DomainModule {
-//    @Provides
-//    fun provideRepository(impl: ExampleRepositoryImpl): ExampleRepository {
-//        return impl
-//    }
-//
-//}
+class DomainModule22 {
+    @Provides
+    fun provideRepository(impl: ExampleRepositoryImpl): ExampleRepository {
+        return impl
+    }
+
+}
 
 //abstract class DomainModule {
 //
@@ -21,8 +21,8 @@ import dagger.Module
 //
 //}
 
-interface DomainModule {
-    @Binds
-    fun bindRepository(impl: ExampleRepositoryImpl): ExampleRepository
-
-}
+//interface DomainModule {
+//    @Provides
+//    fun bindRepository(impl: ExampleRepositoryImpl): ExampleRepository
+//
+//}
