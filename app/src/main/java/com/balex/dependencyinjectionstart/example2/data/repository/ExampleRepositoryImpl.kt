@@ -1,5 +1,6 @@
 package com.balex.dependencyinjectionstart.example2.data.repository
 
+import android.util.Log
 import com.balex.dependencyinjectionstart.example2.data.datasource.ExampleLocalDataSource
 import com.balex.dependencyinjectionstart.example2.data.datasource.ExampleRemoteDataSource
 import com.balex.dependencyinjectionstart.example2.data.mapper.ExampleMapper
@@ -13,6 +14,10 @@ class ExampleRepositoryImpl @Inject constructor(
     @ProdQualifier private val remoteDataSource: ExampleRemoteDataSource,
     private val mapper: ExampleMapper
 ) : ExampleRepository {
+
+    init {
+        Log.d("ExampleRepositoryImpl", "ExampleRepositoryImpl init")
+    }
 
     override fun method() {
         mapper.map()
